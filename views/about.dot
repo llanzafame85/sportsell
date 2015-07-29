@@ -1,0 +1,106 @@
+<body>
+
+    {{#def.header}}
+
+    <!-- content-section-starts -->
+    <div class="main">
+        <div class="about-content">
+            <div class="container">
+                <div class="section group">
+                    <div class="cont about_desc">
+                        <h2>About Us </h2>
+                        <div class="about_img">
+                            <img src="/static/images/about_img.jpg" alt="" />
+                        </div>
+                        <h3>Lorem Ipsum is simply dummy text</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+
+                        <h3>Ut enim ad minim veniam</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    </div>
+                    <div class="rsidebar span_1_of_3">
+                        <h2>Latest News? </h2>
+                        <div class="popular-post">
+                            <div class="post-grid">
+                                <img src="/static/images/latest-post-img1.jpg" title="post1" alt="">
+                                <p>Lorem ipsum dolor sit amet consectetur dolor more normal of letters  Ut enim ad minim veniam,<a href="#">[...]</a></p>
+                                <div class="clearfix"> </div>
+                            </div>
+                            <div class="post-grid">
+                                <img src="/static/images/latest-post-img2.jpg" title="post1" alt="">
+                                <p>Lorem ipsum dolor sit dolor more normal consectetur of letters  Ut enim ad minim veniam,<a href="#">[...]</a></p>
+                                <div class="clearfix"> </div>
+                            </div>
+                            <div class="post-grid">
+                                <img src="/static/images/latest-post-img3.jpg" title="post1" alt="">
+                                <p>Lorem ipsum dolor sit dolor more normal consectetur of letters sit amet  Ut enim ad minim veniam,<a href="#">[...]</a></p>
+                                <div class="clearfix"> </div>
+                            </div>
+                            <div class="view-all">
+                                <a href="#">ViewAll</a>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="latest_comments">
+                            <h2>Latest Comments</h2>
+                            <div class="comments">
+                                <p><span>admin</span> commented on</p>
+                                <h4><a href="#">Lorem ipsum dolor sit dolor more normal!</a></h4>
+                                <p>June 25th, 2013</p>
+                            </div>
+                            <div class="comments">
+                                <p><span>admin</span> commented on</p>
+                                <h4><a href="#">Lorem ipsum dolor sit dolor more normal!</a></h4>
+                                <p>June 20th, 2013</p>
+                            </div>
+                            <div class="comments">
+                                <p><span>admin</span> commented on</p>
+                                <h4><a href="#">Lorem ipsum dolor sit dolor more normal!</a></h4>
+                                <p>June 15th, 2013</p>
+                            </div>
+                            <div class="view-all">
+                                <a href="#">ViewAll</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pack-desc">
+                    <h3>Lorem ipsum  <span>dolor sit amet elit</span> dolore magna aliqua</h3>
+                    <p>There are many variations of passages of Lorem Ipsum available but the majority</p>
+                    <div class="button"><a href="#">Purchase Our Spa Pack</a></div>
+                </div>
+
+                <div class="spa_products">
+                    <h2>Spa Resources</h2>
+                    <div class="section group">
+                        <div class="products_1_of_3">
+                            <img src="/static/images/spa_product4.jpg" alt="" />
+                            <h3>Ipsum is dummy text </h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                            <div class="read_more"><a href="#">Read More</a></div>
+                        </div>
+                        <div class="products_1_of_3">
+                            <img src="/static/images/spa_product5.jpg" alt="" />
+                            <h3>Duis aute irure dolor</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                            <div class="read_more"><a href="#">Read More</a></div>
+                        </div>
+                        <div class="products_1_of_3">
+                            <img src="/static/images/spa_product6.jpg" alt="" />
+                            <h3>dolor sit amet elit</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                            <div class="read_more"><a href="#">Read More</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- content-section-ends -->
+
+
+    {{#def.footer}}
+
+</body>

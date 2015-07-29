@@ -1,0 +1,40 @@
+<body>
+
+{{#def.header}}
+
+<!-- content-section-starts -->
+<div class="main" style="min-height: 350px;">
+    <div class="about-content">
+        <div class="container">
+            <div id="form-main">
+                <div id="form-div">
+                    <form method="post" action="/register">
+
+                        <p class="email">
+                            <input name="emailAddress" type="text" class="feedback-input" id="email_address" placeholder="Email" />
+                        </p>
+
+                        <p class="password">
+                            <input name="password" type="password" class="feedback-input" placeholder="Password" id="password" />
+                        </p>
+
+                        <p class="confirm">
+                            <input name="confirm_password" type="password" class="feedback-input" placeholder="Confirm Password" id="confirm_password" />
+                        </p>
+
+                        <div class="submit">
+                            <input type="submit" value="REGISTER" method="post" id="button-blue"/>
+                            <div class="ease"></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- content-section-ends -->
+
+
+{{#def.footer}}
+
+</body>

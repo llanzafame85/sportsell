@@ -1,0 +1,72 @@
+<!-- header-section-starts -->
+<div class="header-banner">
+    <div class="container">
+        <div class="home">
+                <a href="/home"><img src="/static/images/home.png" alt="" /></a>
+        </div>
+        <div class="header-top">
+            {{?it.user}}
+                <div class="social-icons">
+                    Logged as, {{=it.user.emailAddress}}
+                </div>
+            {{??}}
+                <div class="social-icons">
+                    <i class="facebook"></i>
+                    <i class="twitter"></i>
+                    <i class="googlepluse"></i>
+                </div>
+            {{?}}
+            <span class="menu"></span>
+            <div class="top-menu">
+                <ul>
+                    <nav class="cl-effect-13">
+                        <li><a href="/about">{{=it.i18n('about')}}</a></li>
+                        <li><a href="/gallery">{{=it.i18n('gallery')}}</a></li>
+                        <li><a href="/blog">{{=it.i18n('blog')}}</a></li>
+                        <li><a href="/contact">{{=it.i18n('contact')}}</a></li>
+                    </nav>
+                </ul>
+                <script type="text/javascript">
+                    $("a[href='{{=it.active_path}}']").prop("class","active");
+                </script>
+            </div>
+            <!-- script for menu -->
+            <script>
+                $( "span.menu" ).click(function() {
+                    $( ".top-menu" ).slideToggle( "slow", function() {
+                        // Animation complete.
+                    });
+                });
+            </script>
+            <!-- script for menu -->
+            <div class="clearfix"></div>
+        </div>
+            <div class="clearfix"></div>
+            <div class="{{=it.header_class}} text-center">
+                <h1><a href="index.html">Eforea</a></h1>
+                <h2>{{?it.sub_title}}{{=it.sub_title}}{{?}}</h2>
+            </div>
+        {{?it.show_banner_links}}
+            <div class="header-bottom-grids text-center">
+                <div class="header-bottom-grid1">
+                    <img src="/static/images/1.png" alt="" />
+                    <h4>Claritas est etiam</h4>
+                </div>
+                <div class="header-bottom-grid2">
+                    <img src="/static/images/2.png" alt="" />
+                    <h4>Claritas est etiam</h4>
+                </div>
+                <div class="header-bottom-grid3">
+                    <img src="/static/images/3.png" alt="" />
+                    <h4>Claritas est etiam</h4>
+                </div>
+                <div class="header-bottom-grid4">
+                    <img src="/static/images/4.png" alt="" />
+                    <h4>Claritas est etiam</h4>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        {{?}}
+    </div>
+</div>
+<!-- header-section-ends -->

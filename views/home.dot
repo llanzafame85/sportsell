@@ -1,0 +1,88 @@
+<body>
+
+    {{#def.header}}
+
+    <!-- content-section-starts -->
+    <div class="services">
+        <div class="container">
+            <div class="services-top-grids text-center">
+                <div class="secvice-top-grid-1">
+                    <h3>Mirum est notare</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                    <div class="icon1">
+                        <i class="icon1"></i>
+                    </div>
+                </div>
+                <div class="secvice-top-grid-2">
+                    <h3>Mirum est notare</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                    <div class="icon1">
+                        <i class="icon2"></i>
+                    </div>
+                </div>
+                <div class="secvice-top-grid-3">
+                    <h3>Mirum est notare</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                    <div class="icon1">
+                        <i class="icon3"></i>
+                    </div>
+                </div>
+                <div class="secvice-top-grid-4">
+                    <h3>Mirum est notare</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                    <div class="icon1">
+                        <i class="icon4"></i>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="services-bottom-grids">
+                <div class="col-md-3 services-bottom-left">
+                    <img src="../static/images/s1.jpg" alt="" />
+                </div>
+                <div class="col-md-6 services-bottom-middle text-center">
+                    <h3>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum  </h3>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>
+                </div>
+                <div class="col-md-3 services-bottom-right">
+                    <img src="../static/images/s2.jpg" alt="" />
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+    <div class="items">
+        <div class="container">
+            <div class="col-md-4 item-1">
+                <img src="../static/images/i1.jpg" alt="" />
+                <h3>Duis autem vel eum</h3>
+            </div>
+            <div class="col-md-4 item-2">
+                <img src="../static/images/i2.jpg" alt="" />
+                <h3>Duis autem vel eum</h3>
+            </div>
+            <div class="col-md-4 item-3 text-center">
+                <h4>Claritas est etiam processus dynamicus</h4>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="contact-section">
+        <div class="container">
+            <div class="contact-info">
+                <h3>Contact Form</h3>
+                <form>
+                    <input type="text" class="text" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}">
+                    <input type="text" class="text" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}">
+                    <textarea onfocus="if(this.value == 'Message') this.value='';" onblur="if(this.value == '') this.value='Message';" >Message</textarea>
+                    <input type="button" value="SEND">
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- content-section-ends -->
+
+    {{#def.footer}}
+
+</body>
