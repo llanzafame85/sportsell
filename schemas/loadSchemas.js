@@ -9,6 +9,7 @@ var dot = require("dot").process({
 function loadSchemas() {
 
     require('./domainSchemas/User.js')().init();
+    require('./domainSchemas/Category.js')().init();
 
     return 'Schema load Success';
 }

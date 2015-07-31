@@ -57,7 +57,8 @@ function loadApp() {
             _.forEach(err.errors, function (erro) {
                 errs.push({param:erro.path, msg:erro.message});
             });
-            return res.sendStatus(500).send(errs);
+            console.error("Returning error", err.errors);
+            return res.status(500).send(errs);
         };
         next();
     });
@@ -91,6 +92,8 @@ function loadApp() {
     require('./login/login.js')().register(app);
 
     app.get('/', function(req, res){return res.redirect(301,'/home')});
+
+    app.get('/logout', function(req, res){res.clearCookie('st'); return res.redirect(301, '/home')});
 }
 
 module.exports = function (application, conf) {

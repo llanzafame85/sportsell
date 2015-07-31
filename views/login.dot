@@ -15,40 +15,8 @@
 								<input type="checkbox" class="checkbox">
 								Keep me signed in
 							</span>
-                        <a class="btn btn-default" onclick="login()">Login</a>
+                        <a class="btn btn-default" onclick="submit('login')">Login</a>
                     </form>
-                    <script type="text/javascript">
-                        function login() {
-                            var request = $.ajax({
-                                url: "/login",
-                                method: "POST",
-                                data: $('#loginForm').serialize()
-                            });
-                            request.done(function( msg ) {
-                                window.location.href = '/home';
-                            });
-
-                            request.fail(function( jqXHR, textStatus ) {
-                                showErrors(jqXHR.responseText);
-                            });
-                        }
-
-                        function register() {
-                            var request = $.ajax({
-                                url: "/register",
-                                method: "POST",
-                                data: $('#registerForm').serialize()
-                            });
-                            request.done(function( msg ) {
-                                window.location.href = '/home';
-                            });
-
-                            request.fail(function( jqXHR, textStatus ) {
-                                showErrors(jqXHR.responseText);
-                            });
-                        }
-
-                    </script>
                 </div><!--/login form-->
             </div>
             <div class="col-sm-1">
@@ -62,12 +30,19 @@
                         <input type="email" placeholder="Email Address" name="emailAddress"/>
                         <input type="password" placeholder="Password" name="password"/>
                         <input type="password" placeholder="Confirm Password" name="confirm_password"/>
-                        <a class="btn btn-default" onclick="register()">Signup</a>
+                        <a class="btn btn-default" onclick="submit('register')">Signup</a>
                     </form>
                 </div><!--/sign up form-->
             </div>
         </div>
     </div>
+    <script type="text/javascript">
+        function submit(path) {
+            doPost(path, path + 'Form', function success(msg){
+                window.location.href = '/home';
+            });
+        }
+    </script>
 </section><!--/form-->
 
 

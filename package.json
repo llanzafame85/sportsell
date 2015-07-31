@@ -14,6 +14,7 @@
     "lodash": "2",
     "mongodb": "^2.0.33",
     "mongoose": "^4.0.5",
+    "mongoose-unique-validator": "^0.4.1",
     "password-hash": "^1.2.2",
     "redis": "^0.12.1",
     "tracer": "0"

@@ -2,15 +2,17 @@
 
 var userModel;
 
+
 function schema() {
     var userSchema = new global.mongoose.Schema({
         firstName: {type: String},
         lastName:  {type: String},
-        emailAddress:  {type: String, required:true},
+        emailAddress:  {type: String, required:true, unique:true},
         userName: {type: String},
         password:  {type: String, required:true},
         facebookId: String
     });
+    userSchema.plugin(global.uniqueValidator, { message: '{PATH}, already exists.' });
     return userSchema;
 }
 

@@ -31,34 +31,39 @@ function _post(req, res) {
 
     var errors = req.validationErrors();
     if (!errors) {
-        users.find({emailAddress:req.body.emailAddress}, function (err, user){
+        users.find({emailAddress:req.body.emailAddress}, function(err, user){
             if (hasher.verify(req.body.password, user[0].password)) {
-                var sessionId = guid();
-                res.cookie('st' , sessionId, { maxAge: 1296000000});
-                var cache_key = sessionId;
-                var cache_value =   {   firstName: user[0].firstName,
-                                        lastName:  user[0].lastName,
-                                        emailAddress:  user[0].emailAddress,
-                                        userName: user[0].userName
-                                    };
-                redis.mset(
-                    cache_key,
-                    JSON.stringify(cache_value),
-                    function(error, success) {
-                        if(error) {
-                            log.error({error: error}, 'cannot write counts to redis');
-                        }
-                        res.status(200).send();
-                    }
-                );
+                return _doLogin(err, user[0], res);
             } else {
-                res.status(500).send([{param:'general',msg:'Invalid username or password'}]);
+                return res.status(500).send([{param:'general',msg:'Invalid username or password'}]);
             }
         });
     } else {
         res.status(500).send(errors);
     }
 }
+
+function _doLogin(err, user, res) {
+         var sessionId = guid();
+         res.cookie('st' , sessionId, { maxAge: 1296000000});
+         var cache_key = sessionId;
+         var cache_value = {firstName: user.firstName,
+             lastName:  user.lastName,
+             emailAddress:  user.emailAddress,
+             userName: user.userName
+         };
+         redis.mset(
+             cache_key,
+             JSON.stringify(cache_value),
+             function(error, success) {
+                 if(error) {
+                     log.error({error: error}, 'cannot write counts to redis');
+                 }
+                 return res.status(200).send();
+             }
+         );
+
+ }
 
 function guid() {
     function s4() {
@@ -75,6 +80,7 @@ module.exports = function () {
         register : function (app) {
             app.post('/login', _post);
             app.get('/login', _get);
-        }
+        },
+        doLogin : _doLogin
     }
 };

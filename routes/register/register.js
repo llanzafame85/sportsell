@@ -3,6 +3,7 @@
 var _ = require('lodash');
 var users = require('../../schemas/domainSchemas/User.js')();
 var hasher = require('password-hash');
+var login = require('../login/login.js')();
 
 function _getUsers(req, res) {
     console.info('Loading users');
@@ -30,15 +31,18 @@ function _post(req, res) {
 
     var errors = req.validationErrors();
     if (errors) {
+        console.info('Errror validating.');
         res.status(500).send(errors);
     } else {
         var user = users.new(req.body);
         user.save(function (err) {
             if (err) {
-                return res.errors(err);
+                console.error('User not saved, error.', err);
+                res.errors(err);
+            } else {
+                console.info('User saved.');
+                return login.doLogin(err, user, res);
             }
-            console.info('User saved.');
-            return res.redirect('/home');
         });
     }
 }

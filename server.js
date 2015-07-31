@@ -23,6 +23,10 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 
+process.on('uncaughtException', function (err) {
+    console.error('Caught exception: ' + err.stack);
+});
+
 var express_validator = require('express-validator');
 app.use(express_validator({
         customValidators: {
@@ -61,6 +65,7 @@ app.use('/static', express.static(
 ));
 
 global.mongoose = mongoose;
+global.uniqueValidator = require('mongoose-unique-validator');
 
 app.use(i18n.init);
 

@@ -33,3 +33,19 @@ $(document).ready(function(){
 function showErrors(errors) {
 
 }
+
+function doPost(url, formId, callback) {
+	var request = $.ajax({
+		url: "/" + url,
+		method: "POST",
+		data: $('#' + formId).serialize()
+	});
+
+	request.done(function( msg ) {
+		return callback(msg);
+	});
+
+	request.fail(function( jqXHR, textStatus ) {
+		showErrors(jqXHR.responseText);
+	});
+}
