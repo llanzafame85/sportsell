@@ -1,72 +1,117 @@
-<!-- header-section-starts -->
-<div class="header-banner">
-    <div class="container">
-        <div class="home">
-                <a href="/home"><img src="/static/images/home.png" alt="" /></a>
+<header id="header"><!--header-->
+    <div class="header_top"><!--header_top-->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="contactinfo">
+                        <ul class="nav nav-pills">
+                            <li><a href="#"><i class="fa fa-phone"></i> +2 95 01 88 821</a></li>
+                            <li><a href="#"><i class="fa fa-envelope"></i> info@domain.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="social-icons pull-right">
+                        <ul class="nav navbar-nav">
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="header-top">
-            {{?it.user}}
-                <div class="social-icons">
-                    Logged as, {{=it.user.emailAddress}}
+    </div><!--/header_top-->
+
+    <div class="header-middle"><!--header-middle-->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="logo pull-left">
+                        <a href="index.html"><span>E</span>-Shop</a>
+                    </div>
+                    <div class="btn-group pull-right">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
+                                USA
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Canada</a></li>
+                                <li><a href="#">UK</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
+                                DOLLAR
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Canadian Dollar</a></li>
+                                <li><a href="#">Pound</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-            {{??}}
-                <div class="social-icons">
-                    <i class="facebook"></i>
-                    <i class="twitter"></i>
-                    <i class="googlepluse"></i>
+                <div class="col-sm-8">
+                    <div class="shop-menu pull-right">
+                        <ul class="nav navbar-nav">
+                            <li><a href="/myaccount"><i class="fa fa-user"></i> Account</a></li>
+                            <li><a href="/whishlist"><i class="fa fa-star"></i> Wishlist</a></li>
+                            <li><a href="/checkout"><i class="fa fa-crosshairs"></i> Checkout</a></li>
+                            <li><a href="/chart"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+                            <li><a href="/login"><i class="fa fa-lock"></i> Login</a></li>
+                        </ul>
+                    </div>
                 </div>
-            {{?}}
-            <span class="menu"></span>
-            <div class="top-menu">
-                <ul>
-                    <nav class="cl-effect-13">
-                        <li><a href="/about">{{=it.i18n('about')}}</a></li>
-                        <li><a href="/gallery">{{=it.i18n('gallery')}}</a></li>
-                        <li><a href="/blog">{{=it.i18n('blog')}}</a></li>
-                        <li><a href="/contact">{{=it.i18n('contact')}}</a></li>
-                    </nav>
-                </ul>
-                <script type="text/javascript">
-                    $("a[href='{{=it.active_path}}']").prop("class","active");
-                </script>
             </div>
-            <!-- script for menu -->
-            <script>
-                $( "span.menu" ).click(function() {
-                    $( ".top-menu" ).slideToggle( "slow", function() {
-                        // Animation complete.
-                    });
-                });
-            </script>
-            <!-- script for menu -->
-            <div class="clearfix"></div>
         </div>
-            <div class="clearfix"></div>
-            <div class="{{=it.header_class}} text-center">
-                <h1><a href="index.html">Eforea</a></h1>
-                <h2>{{?it.sub_title}}{{=it.sub_title}}{{?}}</h2>
+    </div><!--/header-middle-->
+
+    <div class="header-bottom"><!--header-bottom-->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-9">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="mainmenu pull-left">
+                        <ul class="nav navbar-nav collapse navbar-collapse">
+                            <li><a href="index.html" class="active">Home</a></li>
+                            <li class="dropdown"><a href="#">Shop<i class="fa fa-angle-down"></i></a>
+                                <ul role="menu" class="sub-menu">
+                                    <li><a href="shop.html">Products</a></li>
+                                    <li><a href="product-details.html">Product Details</a></li>
+                                    <li><a href="checkout.html">Checkout</a></li>
+                                    <li><a href="cart.html">Cart</a></li>
+                                    <li><a href="login.html">Login</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown"><a href="#">Blog<i class="fa fa-angle-down"></i></a>
+                                <ul role="menu" class="sub-menu">
+                                    <li><a href="blog.html">Blog List</a></li>
+                                    <li><a href="blog-single.html">Blog Single</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="404.html">404</a></li>
+                            <li><a href="contact-us.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="search_box pull-right">
+                        <input type="text" placeholder="Search"/>
+                    </div>
+                </div>
             </div>
-        {{?it.show_banner_links}}
-            <div class="header-bottom-grids text-center">
-                <div class="header-bottom-grid1">
-                    <img src="/static/images/1.png" alt="" />
-                    <h4>Claritas est etiam</h4>
-                </div>
-                <div class="header-bottom-grid2">
-                    <img src="/static/images/2.png" alt="" />
-                    <h4>Claritas est etiam</h4>
-                </div>
-                <div class="header-bottom-grid3">
-                    <img src="/static/images/3.png" alt="" />
-                    <h4>Claritas est etiam</h4>
-                </div>
-                <div class="header-bottom-grid4">
-                    <img src="/static/images/4.png" alt="" />
-                    <h4>Claritas est etiam</h4>
-                </div>
-                <div class="clearfix"></div>
-            </div>
-        {{?}}
-    </div>
-</div>
-<!-- header-section-ends -->
+        </div>
+    </div><!--/header-bottom-->
+</header><!--/header-->

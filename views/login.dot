@@ -2,33 +2,74 @@
 
 {{#def.header}}
 
-<!-- content-section-starts -->
-<div class="main" style="min-height: 350px;">
-    <div class="about-content">
-        <div class="container">
-            <div id="form-main">
-                <div id="form-div">
-                    <form method="post" action="/login">
-
-                        <p class="email">
-                            <input name="emailAddress" type="text" class="feedback-input" id="email_address" placeholder="Email" />
-                        </p>
-
-                        <p class="password">
-                            <input name="password" type="password" class="feedback-input" placeholder="Password" id="password" />
-                        </p>
-
-                        <div class="submit">
-                            <input type="submit" value="LOGIN" method="post" id="button-blue"/>
-                            <div class="ease"></div>
-                        </div>
+<section id="form"><!--form-->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4 col-sm-offset-1">
+                <div class="login-form"><!--login form-->
+                    <h2>Login to your account</h2>
+                    <form id="loginForm">
+                        <input type="email" placeholder="Name" name="emailAddress"/>
+                        <input type="password" placeholder="Password" name="password"/>
+							<span>
+								<input type="checkbox" class="checkbox">
+								Keep me signed in
+							</span>
+                        <a class="btn btn-default" onclick="login()">Login</a>
                     </form>
-                </div>
+                    <script type="text/javascript">
+                        function login() {
+                            var request = $.ajax({
+                                url: "/login",
+                                method: "POST",
+                                data: $('#loginForm').serialize()
+                            });
+                            request.done(function( msg ) {
+                                window.location.href = '/home';
+                            });
+
+                            request.fail(function( jqXHR, textStatus ) {
+                                showErrors(jqXHR.responseText);
+                            });
+                        }
+
+                        function register() {
+                            var request = $.ajax({
+                                url: "/register",
+                                method: "POST",
+                                data: $('#registerForm').serialize()
+                            });
+                            request.done(function( msg ) {
+                                window.location.href = '/home';
+                            });
+
+                            request.fail(function( jqXHR, textStatus ) {
+                                showErrors(jqXHR.responseText);
+                            });
+                        }
+
+                    </script>
+                </div><!--/login form-->
+            </div>
+            <div class="col-sm-1">
+                <h2 class="or">OR</h2>
+            </div>
+            <div class="col-sm-4">
+                <div class="signup-form"><!--sign up form-->
+                    <h2>New User Signup!</h2>
+                    <form id="registerForm">
+                        <input type="text" placeholder="Name" name="firstName"/>
+                        <input type="email" placeholder="Email Address" name="emailAddress"/>
+                        <input type="password" placeholder="Password" name="password"/>
+                        <input type="password" placeholder="Confirm Password" name="confirm_password"/>
+                        <a class="btn btn-default" onclick="register()">Signup</a>
+                    </form>
+                </div><!--/sign up form-->
             </div>
         </div>
     </div>
-</div>
-<!-- content-section-ends -->
+</section><!--/form-->
+
 
 
 {{#def.footer}}

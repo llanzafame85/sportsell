@@ -32,7 +32,6 @@ function _post(req, res) {
     var errors = req.validationErrors();
     if (!errors) {
         users.find({emailAddress:req.body.emailAddress}, function (err, user){
-            console.log(user[0].password);
             if (hasher.verify(req.body.password, user[0].password)) {
                 var sessionId = guid();
                 res.cookie('st' , sessionId, { maxAge: 1296000000});
@@ -49,7 +48,7 @@ function _post(req, res) {
                         if(error) {
                             log.error({error: error}, 'cannot write counts to redis');
                         }
-                        res.redirect('/home');
+                        res.status(200).send();
                     }
                 );
             } else {

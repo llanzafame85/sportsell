@@ -45,7 +45,7 @@ function loadApp() {
     app.use(function easyRender(req, res, next) {
         res.sendPage = function (template, args) {
             var params = _.merge({i18n:res.__}, args);
-            res.send(dot.main({"body": dot[template](params)}));
+            res.status(200).send(dot.main({"body": dot[template](params)}));
         };
         next();
     });
@@ -57,7 +57,7 @@ function loadApp() {
             _.forEach(err.errors, function (erro) {
                 errs.push({param:erro.path, msg:erro.message});
             });
-            return res.status(500).send(errs);
+            return res.sendStatus(500).send(errs);
         };
         next();
     });
@@ -78,7 +78,7 @@ function loadApp() {
         if (req.auth_user) {
             return callback(req, res);
         } else {
-            return res.send(403).send();
+            return res.status(403).send('forbidden');
         }
     }
 

@@ -1,6 +1,6 @@
 0 info it worked if it ends with ok
-1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
-1 verbose cli   'c:\\Program Files\\nodejs\\node_modules\\npm\\cli.js',
+1 verbose cli [ 'C:\\Program Files\\nodejs\\nodejs.exe',
+1 verbose cli   'c:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
 1 verbose cli   'start' ]
 2 info using npm@2.7.4
 3 info using node@v0.12.2
@@ -20,7 +20,7 @@
 10 verbose pkgid nodeapp@0.0.1
 11 verbose cwd c:\Users\Luis\DEV\node
 12 error Windows_NT 6.3.9600
-13 error argv "C:\\Program Files\\nodejs\\node.exe" "c:\\Program Files\\nodejs\\node_modules\\npm\\cli.js" "start"
+13 error argv "C:\\Program Files\\nodejs\\nodejs.exe" "c:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "start"
 14 error node v0.12.2
 15 error npm  v2.7.4
 16 error code ELIFECYCLE
